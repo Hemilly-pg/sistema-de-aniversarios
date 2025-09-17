@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Sistema de Aniversários</title>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <h1>📅 Sistema de Aniversários</h1>
-
-  <h2>Cadastrar</h2>
+<h2>Cadastrar</h2>
+<form onsubmit="cadastrar(); return false;">
   <input type="text" id="nome" placeholder="Nome">
   <input type="date" id="data">
   <input type="text" id="telefone" placeholder="Telefone">
-  <button onclick="cadastrar()">Salvar</button>
+  <button type="submit">Salvar</button>
+</form>
 
-  <h2>Lista de Aniversários</h2>
-  <table id="tabela">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Data</th>
-        <th>Telefone</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+<h2>Lista de Aniversários</h2>
+<table id="tabela">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Data</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
-  <button onclick="exportarExcel()">📊 Exportar para Excel</button>
-</body>
-</html>
+<button id="exportar" onclick="exportarExcel()">📊 Exportar para Excel</button>
