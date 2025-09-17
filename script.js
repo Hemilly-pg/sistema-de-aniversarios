@@ -14,12 +14,18 @@ function atualizarTabela() {
   const tbody = document.querySelector("#tabela tbody");
   tbody.innerHTML = "";
 
-  dados.forEach((item, index) => {
+  dados.forEach((item) => {
     const tr = document.createElement("tr");
+
+    // Se tiver telefone, cria link para WhatsApp
+    let telefoneHTML = item.telefone
+      ? `<a href="https://wa.me/${item.telefone.replace(/\D/g, '')}" target="_blank">📱 ${item.telefone}</a>`
+      : "";
+
     tr.innerHTML = `
       <td>${item.nome}</td>
       <td>${item.data}</td>
-      <td>${item.telefone}</td>
+      <td>${telefoneHTML}</td>
     `;
     tbody.appendChild(tr);
   });
