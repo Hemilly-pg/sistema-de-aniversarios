@@ -1,4 +1,16 @@
-<h2>Cadastrar</h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Aniversários</title>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>📅 Sistema de Aniversários</h1>
+
+  <h2>Cadastrar</h2>
 <form onsubmit="cadastrar(); return false;">
   <input type="text" id="nome" placeholder="Nome">
   <input type="date" id="data">
@@ -19,3 +31,6 @@
 </table>
 
 <button id="exportar" onclick="exportarExcel()">📊 Exportar para Excel</button>
+
+</body>
+</html>
